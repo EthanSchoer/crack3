@@ -1,0 +1,18 @@
+---
+triple:          'x86_64-apple-darwin'
+binary-path:     crack
+relocations:
+  - { offset: 0x26, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x1000006D0, symSize: 0x15F }
+  - { offset: 0x42, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x1000006D0, symSize: 0x15F }
+  - { offset: 0x30E, size: 0x8, addend: 0x0, symName: _trim, symObjAddr: 0x0, symBinAddr: 0x100000830, symSize: 0x70 }
+  - { offset: 0x32A, size: 0x8, addend: 0x0, symName: _trim, symObjAddr: 0x0, symBinAddr: 0x100000830, symSize: 0x70 }
+  - { offset: 0x35C, size: 0x8, addend: 0x0, symName: _loadFileAA, symObjAddr: 0x70, symBinAddr: 0x1000008A0, symSize: 0x270 }
+  - { offset: 0x419, size: 0x8, addend: 0x0, symName: _loadFile2D, symObjAddr: 0x2E0, symBinAddr: 0x100000B10, symSize: 0x60 }
+  - { offset: 0x45D, size: 0x8, addend: 0x0, symName: _substringSearchAA, symObjAddr: 0x340, symBinAddr: 0x100000B70, symSize: 0x80 }
+  - { offset: 0x4BD, size: 0x8, addend: 0x0, symName: _exactSearchAA, symObjAddr: 0x3C0, symBinAddr: 0x100000BF0, symSize: 0x80 }
+  - { offset: 0x51D, size: 0x8, addend: 0x0, symName: _substringSearch2D, symObjAddr: 0x440, symBinAddr: 0x100000C70, symSize: 0x20 }
+  - { offset: 0x561, size: 0x8, addend: 0x0, symName: _freeAA, symObjAddr: 0x460, symBinAddr: 0x100000C90, symSize: 0x50 }
+  - { offset: 0x5AF, size: 0x8, addend: 0x0, symName: _free2D, symObjAddr: 0x4B0, symBinAddr: 0x100000CE0, symSize: 0xA }
+  - { offset: 0x80F, size: 0x8, addend: 0x0, symName: _md5, symObjAddr: 0x0, symBinAddr: 0x100000CF0, symSize: 0x1AD }
+  - { offset: 0x82A, size: 0x8, addend: 0x0, symName: _md5, symObjAddr: 0x0, symBinAddr: 0x100000CF0, symSize: 0x1AD }
+...

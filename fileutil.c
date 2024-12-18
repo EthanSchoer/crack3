@@ -54,9 +54,13 @@ char ** loadFileAA(char *filename, int *size)
 		char *line = malloc(100);
 		if (numLines>capacity)
 		{
-			arr = realloc(arr,capacity * sizeof(char*));
-			capacity++;
-		}
+    capacity *= 2;
+    arr = realloc(arr, capacity * sizeof(char*));
+    if (!arr) {
+        perror("realloc failed");
+        exit(1);
+    	}
+	}
 		if (fgets(line, 100, in) != NULL)
 		{
 			trim(line);
@@ -70,8 +74,8 @@ char ** loadFileAA(char *filename, int *size)
 	fclose(in);
 
 	// The size should be the number of entries in the array.
-	*size = capacity;
-	
+	*size = numLines - 1; 
+
 	// Return pointer to the array of strings.
 	printf("%d", *size);
 	return arr;
@@ -113,6 +117,18 @@ char * substringSearchAA(char *target, char **lines, int size)
 		}
 	}
 	return NULL;
+}
+
+char * exactSearchAA(char *target, char **lines, int size)
+{
+    for (int i = 0; i < size; i++)
+    {
+        if (strcmp(lines[i], target) == 0)
+        {
+            return lines[i];
+        }
+    }
+    return NULL;
 }
 
 char * substringSearch2D(char *target, char (*lines)[COLS], int size)

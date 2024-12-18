@@ -14,6 +14,9 @@ char (*loadFile2D(char *filename, int *size))[COLS];
 // Return the found string or NULL if not found.
 char * substringSearchAA(char *target, char ** arr, int size);
 
+char *exactSearchAA(char *target, char **lines, int size);
+
+
 char * substringSearch2D(char *target, char (*arr)[COLS], int size);
 
 
